@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disaster Response Website</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTOdhu6dosnq5JPYVyFWnaqTWF_sh2-E0&callback=initMap" async defer></script>
+    <script src="{% static 'js/script.js' %}" defer></script>
 </head>
 <body>
 <div class="top-bar">
@@ -44,7 +46,6 @@
                         <div id="emergency-contacts" style="display: none;"></div>
                     </div>
                 </li>
-                <!--<li><a href="shelter-locator.html">Shelter Locator</a></li>-->
                 <li><a href="#comments-section" id="community-button">Community</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Weather</a>
@@ -68,10 +69,14 @@
 </header>
 
 <main id="main">
-    <div class="hero">
-        <div class="hero-content">
-            <h2>Shelter Locator</h2>
-            <p>Get help anytime, anywhere</p>
+    <div class="map-container">
+        <div id="map"></div>
+        <div class="list-container">
+            <div class="list-header">
+                <button id="shelters-button" class="active">Shelters</button>
+                <button id="hotels-button">Airbnbs & Hotels</button>
+            </div>
+            <ul id="location-list" class="location-list"></ul>
         </div>
     </div>
 </main>
@@ -126,8 +131,5 @@
         </form>
     </div>
 </div>
-
-<script src="{% static 'js/script.js' %}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTOdhu6dosnq5JPYVyFWnaqTWF_sh2-E0&callback=initMap" async defer></script>
 </body>
 </html>
