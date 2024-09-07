@@ -9,7 +9,7 @@ def homePage(request):
 def get_nearby_shelters(request):
     lat = request.GET.get('lat')
     lng = request.GET.get('lng')
-    api_key = 'AIzaSyCTOdhu6dosnq5JPYVyFWnaqTWF_sh2-E0'
+    api_key = settings.GOOGLE_API_KEY
     query = 'emergency+shelter+OR+disaster+relief+OR+evacuation+center+OR+community+center'
     radius = 10000
 
