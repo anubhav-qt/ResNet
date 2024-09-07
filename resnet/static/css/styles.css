@@ -176,10 +176,11 @@ header {
 .list-container {
     width: 28%;
     height: 90%;
-    border-radius: 25px;
+    border-radius: 7px;
     background-color: var(--white);
     padding: 10px;
     overflow-y: auto;
+    overflow-x: hidden;
     margin-right: 1.5%;
     position: relative;
 }
@@ -424,4 +425,28 @@ header {
 
 #submit-comment:hover {
   background-color: #0056b3;
+}
+
+/* Minimal, light-themed scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
 }
